@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { useCatalogProducts } from '@app/composables/useCatalogProducts';
-import { useLikedProducts } from '@app/composables/useLikedProducts';
 
 const { products, isLoading, hasError, canLoadMore, loadMoreProducts } =
   await useCatalogProducts();
-const { likedProductIds, toggleProductLike } = useLikedProducts();
 </script>
 
 <template>
@@ -12,12 +10,7 @@ const { likedProductIds, toggleProductLike } = useLikedProducts();
     <h1 class="catalog__title">Каталог</h1>
 
     <section class="catalog__content">
-      <CatalogProductList
-        v-if="products.length > 0"
-        :products="products"
-        :liked-product-ids="likedProductIds"
-        @toggle-like="toggleProductLike"
-      />
+      <CatalogProductList v-if="products.length > 0" :products="products" />
 
       <CatalogLoadMoreControls
         :has-error="hasError"

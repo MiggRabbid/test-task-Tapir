@@ -5,19 +5,10 @@ import type { Product } from '@app/types/products';
 
 interface Props {
   product: Product;
-  isLiked: boolean;
 }
 
-const props = defineProps<Props>();
+defineProps<Props>();
 const { formatPrice, formatInstallmentPrice } = usePriceFormatter();
-
-const emit = defineEmits<{
-  (e: 'toggle-like', productId: number): void;
-}>();
-
-const handleToggleLike = (): void => {
-  emit('toggle-like', props.product.id);
-};
 </script>
 
 <template>
@@ -45,16 +36,10 @@ const handleToggleLike = (): void => {
     <button
       class="catalog-card__like-button"
       type="button"
-      :aria-pressed="isLiked"
-      :aria-label="isLiked ? 'Убрать из избранного' : 'Добавить в избранное'"
-      @click.stop="handleToggleLike"
+      aria-pressed="false"
+      aria-label="Добавить в избранное"
     >
-      <svg
-        class="catalog-card__heart"
-        :class="{ 'catalog-card__heart--active': isLiked }"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
+      <svg class="catalog-card__heart" viewBox="0 0 24 24" aria-hidden="true">
         <path
           d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5A5.5 5.5 0 0 1 7.5 3C9.24 3 10.91 3.81 12 5.09 13.09 3.81 14.76 3 16.5 3A5.5 5.5 0 0 1 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z"
         />
@@ -120,10 +105,6 @@ const handleToggleLike = (): void => {
   fill: transparent;
   stroke: var(--color-text-primary);
   stroke-width: 2.2;
-}
-
-.catalog-card__heart--active {
-  fill: var(--color-text-primary);
 }
 
 .catalog-card__meta {

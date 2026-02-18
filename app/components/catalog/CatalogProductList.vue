@@ -3,22 +3,9 @@ import type { Product } from '@app/types/products';
 
 interface Props {
   products: Product[];
-  likedProductIds: number[];
 }
 
-const props = defineProps<Props>();
-
-const emit = defineEmits<{
-  (e: 'toggle-like', productId: number): void;
-}>();
-
-const isProductLiked = (productId: number): boolean => {
-  return props.likedProductIds.includes(productId);
-};
-
-const handleToggleLike = (productId: number): void => {
-  emit('toggle-like', productId);
-};
+defineProps<Props>();
 </script>
 
 <template>
@@ -27,8 +14,6 @@ const handleToggleLike = (productId: number): void => {
       v-for="product in products"
       :key="product.id"
       :product="product"
-      :is-liked="isProductLiked(product.id)"
-      @toggle-like="handleToggleLike"
     />
   </ul>
 </template>
