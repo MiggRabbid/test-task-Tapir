@@ -56,7 +56,7 @@
   opacity: 0.85;
 }
 
-@include bp.tablet-compact {
+@include bp.tablet-down {
   .home__title {
     font-size: var(--font-size-3xl);
   }
