@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import AppFooter from '@app/components/layout/AppFooter.vue';
 import AppHeader from '@app/components/layout/AppHeader.vue';
+import PageContainer from '@app/components/layout/PageContainer.vue';
 </script>
 
 <template>
   <div class="app">
     <NuxtRouteAnnouncer />
     <AppHeader />
-    <NuxtPage />
+    <PageContainer>
+      <NuxtPage />
+    </PageContainer>
     <AppFooter />
   </div>
 </template>

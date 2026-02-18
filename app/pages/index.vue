@@ -1,16 +1,12 @@
-<script setup lang="ts">
-import PageContainer from '@app/components/layout/PageContainer.vue';
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <PageContainer>
-    <div class="home">
-      <section class="home__hero">
-        <h1 class="home__title">ТЕСТОВОЕ ЗАДАНИЕ</h1>
-        <NuxtLink class="home__catalog-link" to="/catalog">в каталог</NuxtLink>
-      </section>
-    </div>
-  </PageContainer>
+  <div class="home">
+    <section class="home__hero">
+      <h1 class="home__title">ТЕСТОВОЕ ЗАДАНИЕ</h1>
+      <NuxtLink class="home__catalog-link" to="/catalog">в каталог</NuxtLink>
+    </section>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -23,14 +19,14 @@ import PageContainer from '@app/components/layout/PageContainer.vue';
 
 .home__hero {
   height: fit-content;
-  flex-direction: column;
   max-width: 680px;
-  gap: 20px;
   display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .home__title {
-  margin: 0 0 28px;
+  margin: 0;
   color: var(--color-text-primary);
   font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-bold);
