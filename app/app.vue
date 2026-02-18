@@ -4,7 +4,7 @@ import AppHeader from '@app/components/layout/AppHeader.vue';
 </script>
 
 <template>
-  <div class="app-shell">
+  <div class="app">
     <NuxtRouteAnnouncer />
     <AppHeader />
     <NuxtPage />
@@ -13,9 +13,9 @@ import AppHeader from '@app/components/layout/AppHeader.vue';
 </template>
 
 <style scoped lang="scss">
-.app-shell {
-  min-height: 100vh;
-  background-color: var(--color-bg-page);
+.app {
+  height: 100dvh;
+  background-color: var(--color-bg-main);
   color: var(--color-text-primary);
   font-family: var(--font-family-base);
 }
