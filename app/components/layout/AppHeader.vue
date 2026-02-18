@@ -5,15 +5,9 @@ import { HEADER_LINKS } from '@app/constants/header-links';
 <template>
   <header class="header">
     <div class="header__content">
-      <div class="header__logo">
-        <HeaderLogo />
-      </div>
-      <div class="header__nav">
-        <HeaderNav :links="HEADER_LINKS" />
-      </div>
-      <div class="header__burger">
-        <HeaderBurgerButton />
-      </div>
+      <HeaderLogo />
+      <HeaderNav :links="HEADER_LINKS" />
+      <HeaderBurgerButton />
     </div>
   </header>
 </template>
@@ -36,42 +30,22 @@ import { HEADER_LINKS } from '@app/constants/header-links';
   gap: var(--container-padding-mobile);
 }
 
-.header__logo {
-  justify-self: start;
-}
-
-.header__nav {
-  justify-self: center;
-}
-
-.header__burger {
-  justify-self: end;
-  display: none;
-}
-
 @media (max-width: 968px) {
   .header {
+    justify-content: space-between;
     padding-left: var(--container-padding-tablet);
     padding-right: var(--container-padding-tablet);
-  }
-}
-
-@media (max-width: 698px) {
-  .header {
-    padding-left: var(--container-padding-mobile);
-    padding-right: var(--container-padding-mobile);
   }
 
   .header__content {
     grid-template-columns: 1fr auto;
   }
+}
 
-  .header__nav {
-    display: none;
-  }
-
-  .header__burger {
-    display: block;
+@media (max-width: 640px) {
+  .header {
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
   }
 }
 </style>

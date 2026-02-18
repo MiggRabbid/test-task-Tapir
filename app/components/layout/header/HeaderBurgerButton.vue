@@ -59,7 +59,7 @@
 
 @media (max-width: 968px) {
   .header-burger {
-    display: inline-flex;
+    display: block;
   }
 }
 </style>

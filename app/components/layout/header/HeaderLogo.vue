@@ -6,7 +6,8 @@
 
 <style scoped lang="scss">
 .header-logo {
-  display: inline-block;
+  width: fit-content;
+  height: fit-content;
   flex-shrink: 0;
   color: var(--color-text-primary);
   text-decoration: none;

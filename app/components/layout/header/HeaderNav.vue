@@ -61,4 +61,10 @@ defineProps<HeaderNavProps>();
     overflow-x: auto;
   }
 }
+
+@media (max-width: 968px) {
+  .header-nav {
+    display: none;
+  }
+}
 </style>
