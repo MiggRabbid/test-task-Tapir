@@ -1,0 +1,59 @@
+$font-family-base: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-heading: $font-family-base;
+
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+$font-size-2xl: 32px;
+
+$line-height-tight: 1.2;
+$line-height-base: 1.4;
+$line-height-relaxed: 1.6;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+/* Palette approximated from test-task-Tapir.fig image assets */
+$color-bg-page: #f8f8f8;
+$color-bg-surface: #ffffff;
+$color-bg-muted: #d8c8b8;
+
+$color-text-primary: #101010;
+$color-text-secondary: #4a4a4a;
+$color-text-inverse: #ffffff;
+
+$color-brand-primary: #d8c8b8;
+$color-brand-secondary: #d0c0b0;
+$color-accent: #808880;
+
+$color-border-default: #d8c8b8;
+$color-border-strong: #b8a898;
+$color-success: #4f8b5b;
+$color-warning: #aa7a35;
+$color-error: #bf4444;
+
+$shadow-sm: 0 2px 8px rgba(16, 16, 16, 0.08);
+$shadow-md: 0 8px 24px rgba(16, 16, 16, 0.12);
+
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 20px;
+$radius-round: 999px;
+
+$space-2xs: 4px;
+$space-xs: 8px;
+$space-sm: 12px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 32px;
+$space-2xl: 48px;
+$space-3xl: 64px;
+
+$container-max-width: 1440px;
+$container-padding-mobile: 16px;
+$container-padding-tablet: 24px;
+$container-padding-desktop: 40px;

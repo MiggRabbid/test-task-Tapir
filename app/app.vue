@@ -1,6 +1,17 @@
 <template>
-  <div>
+  <div class="app-shell">
     <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <AppHeader />
+    <NuxtPage />
+    <AppFooter />
   </div>
 </template>
+
+<style scoped lang="scss">
+.app-shell {
+  min-height: 100vh;
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+}
+</style>

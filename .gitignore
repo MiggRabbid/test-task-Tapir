@@ -1,3 +1,7 @@
+test-task-Tapir.fig
+.fig_unpack/
+.fig_unpack/*
+
 # Nuxt dev/build outputs
 .output
 .data
