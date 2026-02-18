@@ -1,13 +1,8 @@
+import { PAGE_LIMIT, DEFAULT_PAGE, PRODUCTS_API_URL } from '@app/constants/api-config';
+
 import type { ProductsApiResponse } from '@app/types/products';
 
-const PRODUCTS_API_URL = 'https://test-task-api.tapir.ws/products';
-const DEFAULT_PAGE = 1;
-const DEFAULT_LIMIT = 12;
-
-const parsePositiveNumber = (
-  value: unknown,
-  fallback: number,
-): number => {
+const parsePositiveNumber = (value: unknown, fallback: number): number => {
   const rawValue = Array.isArray(value) ? value[0] : value;
   const parsedValue = Number.parseInt(String(rawValue), 10);
 
@@ -21,7 +16,7 @@ const parsePositiveNumber = (
 export default defineEventHandler(async (event) => {
   const query = getQuery(event);
   const page = parsePositiveNumber(query.page, DEFAULT_PAGE);
-  const limit = parsePositiveNumber(query.limit, DEFAULT_LIMIT);
+  const limit = parsePositiveNumber(query.limit, PAGE_LIMIT);
   const upstreamUrl = `${PRODUCTS_API_URL}?page=${page}&limit=${limit}`;
 
   console.info('[api/products] Incoming request', {
