@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { usePriceFormatter } from '@app/composables/usePriceFormatter';
+
 import type { Product } from '@app/types/products';
 
 interface Props {
@@ -7,18 +9,11 @@ interface Props {
 }
 
 const props = defineProps<Props>();
+const { formatPrice, formatInstallmentPrice } = usePriceFormatter();
 
 const emit = defineEmits<{
   (e: 'toggle-like', productId: number): void;
 }>();
-
-const formatPrice = (price: number): string => {
-  return new Intl.NumberFormat('ru-RU').format(price);
-};
-
-const formatInstallmentPrice = (price: number): string => {
-  return formatPrice(Math.ceil(price / 2));
-};
 
 const handleToggleLike = (): void => {
   emit('toggle-like', props.product.id);
