@@ -17,3 +17,15 @@ g:
 
 p:
 	npm run preview
+
+l:
+	npm run lint
+
+lf:
+	npm run lint:fix
+
+f:
+	npm run format
+
+fc:
+	npm run format:check
