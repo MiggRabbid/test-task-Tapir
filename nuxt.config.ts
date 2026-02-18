@@ -1,6 +1,4 @@
-import { fileURLToPath } from 'node:url'
-
-const appDir = fileURLToPath(new URL('./app', import.meta.url))
+const appDir = new URL('./app', import.meta.url).pathname;
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -8,26 +6,14 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   alias: {
-    '@app': appDir
-  },
-  vite: {
-    resolve: {
-      alias: {
-        '@app': appDir
-      }
-    }
-  },
-  nitro: {
-    alias: {
-      '@app': appDir
-    }
+    '@app': appDir,
   },
   modules: ['@nuxt/eslint'],
   css: ['~/assets/scss/main.scss'],
   components: [
     {
       path: '~/components',
-      pathPrefix: false
-    }
-  ]
-})
+      pathPrefix: false,
+    },
+  ],
+});
