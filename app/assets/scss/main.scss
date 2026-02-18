@@ -1,5 +1,29 @@
 @use './abstracts/tokens' as *;
 
+@font-face {
+  font-family: 'Golos Text';
+  src: url('../fonts/GolosText-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Golos Text';
+  src: url('../fonts/GolosText-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Golos Text';
+  src: url('../fonts/GolosText-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --font-family-base: #{$font-family-base};
   --font-family-heading: #{$font-family-heading};
@@ -20,47 +44,24 @@
   --font-weight-semibold: #{$font-weight-semibold};
   --font-weight-bold: #{$font-weight-bold};
 
-  --color-bg-page: #{$color-bg-page};
-  --color-bg-surface: #{$color-bg-surface};
-  --color-bg-muted: #{$color-bg-muted};
+  --color-bg-main: #{$color-bg-main};
+  --color-bg-second: #{$color-bg-second};
   --color-bg-contrast: #{$color-bg-contrast};
-  --color-bg-header: #{$color-bg-header};
 
   --color-text-primary: #{$color-text-primary};
   --color-text-secondary: #{$color-text-secondary};
   --color-text-inverse: #{$color-text-inverse};
-  --color-text-muted: #{$color-text-muted};
-
-  --color-brand-primary: #{$color-brand-primary};
-  --color-brand-secondary: #{$color-brand-secondary};
-  --color-accent: #{$color-accent};
   --color-accent-danger: #{$color-accent-danger};
-
-  --color-border-default: #{$color-border-default};
-  --color-border-strong: #{$color-border-strong};
-  --color-success: #{$color-success};
-  --color-warning: #{$color-warning};
-  --color-error: #{$color-error};
-
-  --shadow-sm: #{$shadow-sm};
-  --shadow-md: #{$shadow-md};
-
-  --radius-sm: #{$radius-sm};
-  --radius-md: #{$radius-md};
-  --radius-lg: #{$radius-lg};
-  --radius-round: #{$radius-round};
-
-  --space-2xs: #{$space-2xs};
-  --space-xs: #{$space-xs};
-  --space-sm: #{$space-sm};
-  --space-md: #{$space-md};
-  --space-lg: #{$space-lg};
-  --space-xl: #{$space-xl};
-  --space-2xl: #{$space-2xl};
-  --space-3xl: #{$space-3xl};
 
   --container-max-width: #{$container-max-width};
   --container-padding-mobile: #{$container-padding-mobile};
   --container-padding-tablet: #{$container-padding-tablet};
   --container-padding-desktop: #{$container-padding-desktop};
+}
+
+html,
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
 }
