@@ -12,10 +12,10 @@ const emit = defineEmits<{
 }>();
 
 const btnText = computed(() => {
-  if (props.isLoading) {
-    return 'Загрузка...';
-  } else if (props.hasError) {
+  if (props.hasError && !props.isLoading) {
     return 'Повторить';
+  } else if (props.isLoading) {
+    return 'Загрузка...';
   } else {
     return 'Показать еще';
   }
@@ -24,11 +24,13 @@ const btnText = computed(() => {
 
 <template>
   <div class="controls">
-    <p v-if="hasError" class="controls__error">Произошла ошибка, попробуйте позже</p>
+    <p v-if="hasError && !isLoading" class="controls__error">
+      Произошла ошибка, попробуйте позже
+    </p>
 
     <button
       v-if="canLoadMore"
-      :class="isLoading ? 'controls__loading' : 'controls__btn'"
+      :class="isLoading ? 'controls__loading' : 'controls__button'"
       :disabled="isLoading"
       type="button"
       @click="emit('load-more')"
@@ -54,8 +56,9 @@ const btnText = computed(() => {
     transform: translateX(-50%);
     position: absolute;
   }
-  &__btn,
-  &__loading {
+
+  &__loading,
+  &__button {
     width: fit-content;
     height: fit-content;
     opacity: 1;
@@ -63,27 +66,24 @@ const btnText = computed(() => {
     background-color: var(--color-bg-main);
     border: 1px solid transparent;
     font-size: 14px;
-  }
 
-  &__btn {
-    border-color: var(--color-text-primary);
     &:hover {
       opacity: 0.8;
     }
+
+    &:disabled {
+      opacity: 1;
+      color: var(--color-text-primary);
+      border: 1px solid transparent;
+      -webkit-text-fill-color: var(--color-text-primary);
+    }
   }
 
-  &__btn:disabled,
-  &__loading:disabled {
-    opacity: 1;
-    color: var(--color-text-primary);
-    background-color: var(--color-bg-main);
-    -webkit-text-fill-color: var(--color-text-primary);
-  }
-  &__btn:disabled {
+  &__button {
     border-color: var(--color-text-primary);
-  }
-  &__loading:disabled {
-    border-color: transparent;
+    &:disabled {
+      border-color: var(--color-text-primary);
+    }
   }
 }
 </style>
