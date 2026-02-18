@@ -42,7 +42,6 @@
   --font-weight-regular: #{$font-weight-regular};
   --font-weight-medium: #{$font-weight-medium};
   --font-weight-semibold: #{$font-weight-semibold};
-  --font-weight-bold: #{$font-weight-bold};
 
   --color-bg-main: #{$color-bg-main};
   --color-bg-second: #{$color-bg-second};
@@ -55,8 +54,11 @@
 
   --container-max-width: #{$container-max-width};
   --container-padding-mobile: #{$container-padding-mobile};
+  --container-padding-mobile-y: #{$container-padding-mobile-y};
   --container-padding-tablet: #{$container-padding-tablet};
+  --container-padding-tablet-y: #{$container-padding-tablet-y};
   --container-padding-desktop: #{$container-padding-desktop};
+  --container-padding-desktop-y: #{$container-padding-desktop-y};
 }
 
 html,

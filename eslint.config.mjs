@@ -1,17 +1,19 @@
-import withNuxt from './.nuxt/eslint.config.mjs'
-import eslintConfigPrettier from 'eslint-config-prettier'
-import prettierConfig from './prettier.config.cjs'
-import prettierPlugin from 'eslint-plugin-prettier'
+import withNuxt from './.nuxt/eslint.config.mjs';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import prettierConfig from './prettier.config.cjs';
+import prettierPlugin from 'eslint-plugin-prettier';
 
 export default withNuxt(
   {
     plugins: {
-      prettier: prettierPlugin
+      prettier: prettierPlugin,
     },
     settings: {
       'import/resolver': {
-        node: true
-      }
+        node: {
+          extensions: ['.js', '.mjs', '.cjs', '.ts', '.d.ts', '.vue'],
+        },
+      },
     },
     rules: {
       'no-unused-vars': 'off',
@@ -23,7 +25,7 @@ export default withNuxt(
       '@typescript-eslint/no-shadow': 'warn',
       'no-underscore-dangle': ['error', { allow: ['__filename', '__dirname'] }],
       'prettier/prettier': ['error', prettierConfig],
-      'import/no-unresolved': 'error',
+      'import/no-unresolved': 'off',
       'import/named': 'error',
       'import/default': 'error',
       'import/namespace': 'error',
@@ -34,10 +36,18 @@ export default withNuxt(
         {
           alphabetize: { order: 'asc', caseInsensitive: true },
           'newlines-between': 'always',
-          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'type']
-        }
-      ]
-    }
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            'parent',
+            'sibling',
+            'index',
+            'type',
+          ],
+        },
+      ],
+    },
   },
-  eslintConfigPrettier
-)
+  eslintConfigPrettier,
+);

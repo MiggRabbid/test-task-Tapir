@@ -14,8 +14,8 @@
 
 .header-logo__mark {
   display: block;
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   background-color: var(--color-accent-danger);
 }
 </style>

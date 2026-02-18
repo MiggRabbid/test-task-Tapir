@@ -22,10 +22,10 @@ defineProps<HeaderNavProps>();
 
 <style scoped lang="scss">
 .header-nav {
-  background-color: var(--color-bg-header);
+  background-color: var(--color-bg-second);
   box-sizing: border-box;
   width: 590px;
-  height: 40px;
+  max-width: 100%;
   padding: 10px 24px;
   backdrop-filter: blur(100px);
 }
@@ -34,8 +34,6 @@ defineProps<HeaderNavProps>();
   display: flex;
   align-items: center;
   gap: 40px;
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -43,11 +41,11 @@ defineProps<HeaderNavProps>();
 }
 
 .header-nav__link {
-  color: #000;
-  font-family: 'Golos Text', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
   letter-spacing: 0;
   vertical-align: bottom;
   text-decoration: none;
@@ -60,14 +58,7 @@ defineProps<HeaderNavProps>();
 @media (max-width: 1200px) {
   .header-nav {
     width: 100%;
-    max-width: 590px;
     overflow-x: auto;
-    padding: 12px 16px;
-  }
-
-  .header-nav__menu {
-    gap: 24px;
-    width: max-content;
   }
 }
 </style>
