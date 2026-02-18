@@ -160,7 +160,7 @@ const handleToggleLike = (): void => {
   color: var(--color-text-inverse);
   font-family: var(--font-family-base);
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
   line-height: var(--line-height-line);
 }
 

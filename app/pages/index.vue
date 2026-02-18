@@ -31,7 +31,7 @@
   margin: 0;
   color: var(--color-text-primary);
   font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
   line-height: 1;
 }
 
