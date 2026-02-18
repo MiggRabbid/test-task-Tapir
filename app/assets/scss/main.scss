@@ -34,7 +34,10 @@
   --font-size-lg: #{$font-size-lg};
   --font-size-xl: #{$font-size-xl};
   --font-size-2xl: #{$font-size-2xl};
+  --font-size-3xl: #{$font-size-3xl};
+  --font-size-4xl: #{$font-size-4xl};
 
+  --line-height-line: #{$line-height-line};
   --line-height-tight: #{$line-height-tight};
   --line-height-base: #{$line-height-base};
   --line-height-relaxed: #{$line-height-relaxed};
@@ -66,4 +69,8 @@ body {
   margin: 0;
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-regular);
+}
+
+* {
+  box-sizing: border-box;
 }

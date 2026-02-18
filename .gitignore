@@ -1,6 +1,4 @@
-test-task-Tapir.fig
-.fig_unpack/
-.fig_unpack/*
+
 
 # Nuxt dev/build outputs
 .output
@@ -23,6 +21,10 @@ logs
 .idea
 
 # Local env files
+.vscode
 .env
 .env.*
 !.env.example
+test-task-Tapir.fig
+.fig_unpack/
+.fig_unpack/*
