@@ -13,6 +13,8 @@ import { HEADER_LINKS } from '@app/constants/header-links';
 </template>
 
 <style scoped lang="scss">
+@use '~/assets/scss/abstracts/breakpoints' as bp;
+
 .header {
   background-color: transparent;
   padding-left: var(--container-padding-desktop);
@@ -30,7 +32,7 @@ import { HEADER_LINKS } from '@app/constants/header-links';
   gap: var(--container-padding-mobile);
 }
 
-@media (max-width: 968px) {
+@include bp.tablet-down {
   .header {
     padding-left: var(--container-padding-tablet);
     padding-right: var(--container-padding-tablet);
@@ -41,7 +43,7 @@ import { HEADER_LINKS } from '@app/constants/header-links';
   }
 }
 
-@media (max-width: 640px) {
+@include bp.mobile-down {
   .header {
     padding-left: var(--container-padding-mobile);
     padding-right: var(--container-padding-mobile);

@@ -5,6 +5,8 @@
 </template>
 
 <style scoped lang="scss">
+@use '~/assets/scss/abstracts/breakpoints' as bp;
+
 .header-logo {
   width: fit-content;
   height: fit-content;
@@ -20,14 +22,14 @@
   background-color: var(--color-accent-danger);
 }
 
-@media (max-width: 968px) {
+@include bp.tablet-down {
   .header-logo__mark {
     width: 36px;
     height: 36px;
   }
 }
 
-@media (max-width: 640px) {
+@include bp.mobile-down {
   .header-logo__mark {
     width: 28px;
     height: 28px;

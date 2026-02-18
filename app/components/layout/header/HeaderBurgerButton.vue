@@ -29,6 +29,8 @@
 </template>
 
 <style scoped lang="scss">
+@use '~/assets/scss/abstracts/breakpoints' as bp;
+
 .header-burger {
   position: relative;
   display: none;
@@ -42,7 +44,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 968px) {
+@include bp.tablet-down {
   .header-burger {
     display: block;
   }

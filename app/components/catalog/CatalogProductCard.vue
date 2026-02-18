@@ -64,6 +64,8 @@ const handleToggleLike = (): void => {
 </template>
 
 <style scoped lang="scss">
+@use '~/assets/scss/abstracts/breakpoints' as bp;
+
 .catalog-card {
   width: 100%;
   position: relative;
@@ -176,13 +178,13 @@ const handleToggleLike = (): void => {
   white-space: nowrap;
 }
 
-@media (max-width: 968px) {
+@include bp.tablet-down {
   .catalog-card__link {
     gap: 25px;
   }
 }
 
-@media (max-width: 640px) {
+@include bp.mobile-down {
   .catalog-card__link {
     gap: 20px;
   }

@@ -27,6 +27,8 @@ import { FOOTER_SECTIONS } from '@app/constants/footer-content';
 </template>
 
 <style scoped lang="scss">
+@use '~/assets/scss/abstracts/breakpoints' as bp;
+
 .footer {
   background-color: var(--color-bg-contrast);
 }
@@ -93,7 +95,7 @@ import { FOOTER_SECTIONS } from '@app/constants/footer-content';
   opacity: 0.72;
 }
 
-@media (max-width: 968px) {
+@include bp.tablet-down {
   .footer__grid {
     grid-template-columns: repeat(2, minmax(220px, 1fr));
     justify-content: stretch;
@@ -105,7 +107,7 @@ import { FOOTER_SECTIONS } from '@app/constants/footer-content';
   }
 }
 
-@media (max-width: 640px) {
+@include bp.mobile-down {
   .footer__grid {
     grid-template-columns: 1fr;
     padding-left: var(--container-padding-mobile);

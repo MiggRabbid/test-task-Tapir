@@ -30,6 +30,8 @@ const { likedProductIds, toggleProductLike } = useLikedProducts();
 </template>
 
 <style scoped lang="scss">
+@use '~/assets/scss/abstracts/breakpoints' as bp;
+
 .catalog {
   width: 100%;
   min-height: 100%;
@@ -58,7 +60,7 @@ const { likedProductIds, toggleProductLike } = useLikedProducts();
   gap: 110px;
 }
 
-@media (max-width: 968px) {
+@include bp.tablet-down {
   .catalog {
     gap: 60px;
   }
@@ -71,7 +73,7 @@ const { likedProductIds, toggleProductLike } = useLikedProducts();
   }
 }
 
-@media (max-width: 640px) {
+@include bp.mobile-down {
   .catalog {
     gap: 40px;
   }

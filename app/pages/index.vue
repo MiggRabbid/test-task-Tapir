@@ -10,6 +10,8 @@
 </template>
 
 <style scoped lang="scss">
+@use '~/assets/scss/abstracts/breakpoints' as bp;
+
 .home {
   width: 100%;
   display: flex;
@@ -54,13 +56,13 @@
   opacity: 0.85;
 }
 
-@media (max-width: 960px) {
+@include bp.tablet-compact {
   .home__title {
     font-size: var(--font-size-3xl);
   }
 }
 
-@media (max-width: 640px) {
+@include bp.mobile-down {
   .home__title {
     font-size: var(--font-size-xl);
   }

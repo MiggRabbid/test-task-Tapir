@@ -21,6 +21,8 @@ defineProps<HeaderNavProps>();
 </template>
 
 <style scoped lang="scss">
+@use '~/assets/scss/abstracts/breakpoints' as bp;
+
 .header-nav {
   background-color: var(--color-bg-second);
   box-sizing: border-box;
@@ -55,14 +57,14 @@ defineProps<HeaderNavProps>();
   opacity: 0.7;
 }
 
-@media (max-width: 1200px) {
+@include bp.nav-collapse-down {
   .header-nav {
     width: 100%;
     overflow-x: auto;
   }
 }
 
-@media (max-width: 968px) {
+@include bp.tablet-down {
   .header-nav {
     display: none;
   }

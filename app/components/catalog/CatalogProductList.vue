@@ -34,6 +34,8 @@ const handleToggleLike = (productId: number): void => {
 </template>
 
 <style scoped lang="scss">
+@use '~/assets/scss/abstracts/breakpoints' as bp;
+
 .catalog__list {
   width: 100%;
   display: grid;
@@ -44,20 +46,20 @@ const handleToggleLike = (productId: number): void => {
   list-style: none;
 }
 
-@media (max-width: 1280px) {
+@include bp.desktop-compact-down {
   .catalog__list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 968px) {
+@include bp.tablet-down {
   .catalog__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 }
 
-@media (max-width: 640px) {
+@include bp.mobile-down {
   .catalog__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;

@@ -5,6 +5,8 @@
 </template>
 
 <style scoped lang="scss">
+@use '~/assets/scss/abstracts/breakpoints' as bp;
+
 .page-container {
   display: flex;
   min-height: calc(100dvh - 82px);
@@ -16,7 +18,7 @@
   padding-bottom: var(--container-padding-desktop-y);
 }
 
-@media (max-width: 968px) {
+@include bp.tablet-down {
   .page-container {
     padding-left: var(--container-padding-tablet);
     padding-right: var(--container-padding-tablet);
@@ -25,7 +27,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@include bp.mobile-down {
   .page-container {
     padding-left: var(--container-padding-mobile);
     padding-right: var(--container-padding-mobile);
