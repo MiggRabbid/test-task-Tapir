@@ -42,21 +42,6 @@
   cursor: pointer;
 }
 
-.header-burger__line {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-text-primary);
-}
-
-.header-burger__line:nth-child(1) {
-  transform: translateY(-16px);
-}
-
-.header-burger__line:nth-child(3) {
-  transform: translateY(16px);
-}
-
 @media (max-width: 968px) {
   .header-burger {
     display: block;

@@ -41,7 +41,6 @@ import { FOOTER_SECTIONS } from '@app/constants/footer-content';
   width: 100%;
   max-width: var(--container-max-width);
   min-height: 390px;
-  margin: 0 auto;
   border-top: 1px solid var(--color-text-inverse);
   padding-left: var(--container-padding-desktop);
   padding-right: var(--container-padding-desktop);

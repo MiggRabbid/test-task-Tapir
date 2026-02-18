@@ -32,7 +32,6 @@ import { HEADER_LINKS } from '@app/constants/header-links';
 
 @media (max-width: 968px) {
   .header {
-    justify-content: space-between;
     padding-left: var(--container-padding-tablet);
     padding-right: var(--container-padding-tablet);
   }

@@ -39,7 +39,6 @@ const handleToggleLike = (productId: number): void => {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;

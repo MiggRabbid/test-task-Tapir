@@ -161,15 +161,6 @@ const toggleProductLike = (productId: number): void => {
     font-size: 14px;
   }
 
-  &__loading {
-    width: fit-content;
-    height: fit-content;
-    opacity: 1;
-    padding: 10px 24px;
-    background-color: var(--color-bg-main);
-    font-size: 14px;
-  }
-
   &__btn {
     border-color: var(--color-text-primary);
     &:hover {
