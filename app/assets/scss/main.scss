@@ -23,14 +23,18 @@
   --color-bg-page: #{$color-bg-page};
   --color-bg-surface: #{$color-bg-surface};
   --color-bg-muted: #{$color-bg-muted};
+  --color-bg-contrast: #{$color-bg-contrast};
+  --color-bg-header: #{$color-bg-header};
 
   --color-text-primary: #{$color-text-primary};
   --color-text-secondary: #{$color-text-secondary};
   --color-text-inverse: #{$color-text-inverse};
+  --color-text-muted: #{$color-text-muted};
 
   --color-brand-primary: #{$color-brand-primary};
   --color-brand-secondary: #{$color-brand-secondary};
   --color-accent: #{$color-accent};
+  --color-accent-danger: #{$color-accent-danger};
 
   --color-border-default: #{$color-border-default};
   --color-border-strong: #{$color-border-strong};

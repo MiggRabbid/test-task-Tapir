@@ -1,7 +1,7 @@
 <template>
-  <a class="header-logo" href="#" aria-label="Логотип">
+  <NuxtLink class="header-logo" to="/" aria-label="На главную">
     <span class="header-logo__mark" aria-hidden="true" />
-  </a>
+  </NuxtLink>
 </template>
 
 <style scoped lang="scss">
@@ -16,6 +16,6 @@
   display: block;
   width: 48px;
   height: 48px;
-  background-color: #fb1313;
+  background-color: var(--color-accent-danger);
 }
 </style>

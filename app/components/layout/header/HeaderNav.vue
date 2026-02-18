@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { HeaderLink } from '../../../constants/header-links.ts';
+import type { HeaderLink } from '@app/constants/header-links';
 
 interface HeaderNavProps {
   links: HeaderLink[];
@@ -22,15 +22,20 @@ defineProps<HeaderNavProps>();
 
 <style scoped lang="scss">
 .header-nav {
-  justify-self: center;
-  background-color: #e9e9e9;
-  padding: 14px 24px;
+  background-color: var(--color-bg-header);
+  box-sizing: border-box;
+  width: 590px;
+  height: 40px;
+  padding: 10px 24px;
+  backdrop-filter: blur(100px);
 }
 
 .header-nav__menu {
   display: flex;
   align-items: center;
   gap: 40px;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -38,10 +43,13 @@ defineProps<HeaderNavProps>();
 }
 
 .header-nav__link {
-  color: var(--color-text-primary);
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 1;
+  color: #000;
+  font-family: 'Golos Text', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  vertical-align: bottom;
   text-decoration: none;
 }
 
@@ -52,6 +60,7 @@ defineProps<HeaderNavProps>();
 @media (max-width: 1200px) {
   .header-nav {
     width: 100%;
+    max-width: 590px;
     overflow-x: auto;
     padding: 12px 16px;
   }
@@ -59,10 +68,6 @@ defineProps<HeaderNavProps>();
   .header-nav__menu {
     gap: 24px;
     width: max-content;
-  }
-
-  .header-nav__link {
-    font-size: 20px;
   }
 }
 </style>

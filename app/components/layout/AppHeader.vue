@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { HEADER_LINKS } from '../../constants/header-links.ts';
+import { HEADER_LINKS } from '@app/constants/header-links';
 </script>
 
 <template>
@@ -15,21 +15,32 @@ import { HEADER_LINKS } from '../../constants/header-links.ts';
 
 <style scoped lang="scss">
 .header {
-  background-color: #e9e9e9;
+  background-color: transparent;
 }
 
 .header__content {
   display: grid;
-  align-items: center;
-  grid-template-columns: 96px 1fr 96px;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
   gap: var(--space-lg);
-  min-height: 112px;
+}
+
+.header__content > :first-child {
+  justify-self: start;
+}
+
+.header__content > :nth-child(2) {
+  justify-self: center;
 }
 
 @media (max-width: 1200px) {
   .header__content {
     grid-template-columns: auto 1fr;
-    min-height: 88px;
+    align-items: center;
+  }
+
+  .header__content > :nth-child(2) {
+    justify-self: end;
   }
 }
 </style>

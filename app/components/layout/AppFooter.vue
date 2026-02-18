@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FOOTER_SECTIONS } from '../../constants/footer-content.ts';
+import { FOOTER_SECTIONS } from '@app/constants/footer-content';
 </script>
 
 <template>
@@ -31,7 +31,7 @@ import { FOOTER_SECTIONS } from '../../constants/footer-content.ts';
 <style scoped lang="scss">
 .footer {
   padding: 72px 0 84px;
-  background-color: #000;
+  background-color: var(--color-bg-contrast);
 }
 
 .footer__grid {
@@ -42,7 +42,7 @@ import { FOOTER_SECTIONS } from '../../constants/footer-content.ts';
 
 .footer__title {
   margin: 0;
-  color: #5a5a5a;
+  color: var(--color-text-muted);
   font-size: 42px;
   font-weight: 500;
   line-height: 1.2;
@@ -59,7 +59,7 @@ import { FOOTER_SECTIONS } from '../../constants/footer-content.ts';
 }
 
 .footer__link {
-  color: #f7f7f7;
+  color: var(--color-text-inverse);
   font-size: 46px;
   font-weight: 400;
   line-height: 1.2;
