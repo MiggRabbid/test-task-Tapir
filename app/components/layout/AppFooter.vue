@@ -94,7 +94,7 @@ import { FOOTER_SECTIONS } from '@app/constants/footer-content';
   opacity: 0.72;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 968px) {
   .footer__grid {
     grid-template-columns: repeat(2, minmax(220px, 1fr));
     justify-content: stretch;
@@ -106,7 +106,7 @@ import { FOOTER_SECTIONS } from '@app/constants/footer-content';
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 640px) {
   .footer__grid {
     grid-template-columns: 1fr;
     padding-left: var(--container-padding-mobile);

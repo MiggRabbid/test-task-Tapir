@@ -18,4 +18,18 @@
   height: 42px;
   background-color: var(--color-accent-danger);
 }
+
+@media (max-width: 968px) {
+  .header-logo__mark {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-logo__mark {
+    width: 28px;
+    height: 28px;
+  }
+}
 </style>
