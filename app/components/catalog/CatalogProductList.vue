@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import CatalogProductCard from '@app/components/catalog/CatalogProductCard.vue';
-
 import type { Product } from '@app/types/products';
 
 interface Props {
@@ -25,24 +23,45 @@ const handleToggleLike = (productId: number): void => {
 
 <template>
   <ul class="catalog__list">
-    <li v-for="product in products" :key="product.id" class="catalog__item">
-      <CatalogProductCard
-        :product="product"
-        :is-liked="isProductLiked(product.id)"
-        @toggle-like="handleToggleLike"
-      />
-    </li>
+    <CatalogProductCard
+      v-for="product in products"
+      :key="product.id"
+      :product="product"
+      :is-liked="isProductLiked(product.id)"
+      @toggle-like="handleToggleLike"
+    />
   </ul>
 </template>
 
 <style scoped lang="scss">
 .catalog__list {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 290px);
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
   justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@media (max-width: 1280px) {
+  .catalog__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 968px) {
+  .catalog__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .catalog__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
 </style>
