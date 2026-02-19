@@ -10,6 +10,8 @@ d:
 	npm  run dev
 
 b:
+
+	rm -rf .output
 	npm run build
 
 g:
